@@ -24,12 +24,10 @@ def print_odd_numbers(stop):
     for i in range(1, stop + 1, 2): 
         print(i)
 
-
-   
         
 #countdown()
 #repeat_greeting(3)
-#sum_range(10)
+#sum_range(3)
 #print_odd_numbers(9)
 
 

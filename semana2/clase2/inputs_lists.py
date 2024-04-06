@@ -16,14 +16,14 @@ def input_numbers():
     if answer == "1" or answer.upper() == "YES":
         input_numbers()
     else:
-        print("tysm!")  
+        print("tysm!")
         
         
-def calculate_average(list):
+def calculate_average(number_list):
     sum_total = 0
-    for i in list:
+    for i in number_list:
         sum_total += i
-    print(f"The are {len(list)} numbers on the list and the average is: {sum_total / len(list)}")
+    print(f"The are {len(number_list)} numbers on the list and the average is: {sum_total / len(number_list)}")
         
         
 def calculate_factorial():
@@ -39,7 +39,7 @@ def calculate_vocals():
     text = input("Type something... ")
     for i in text.lower():
         if i in ["a", "e", "i", "o", "u"]:
-            vocals += i
+            vocals += 1
     print(f"There are: {vocals} vocals in the string")
     
     
