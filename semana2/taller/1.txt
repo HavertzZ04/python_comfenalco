@@ -1,0 +1,19 @@
+Explica con tus palabras cuales serian elementos de entrada - proceso - salida de los siguientes casos: 
+
+Pedir un Servicio de Transporte:
+    Entrada: Ingresar ruta, poner precio, aceptar tarifa
+    Proceso: Ir en el vehiculo
+    Salida: Llegar a ruta de destina, pagar
+
+Preparar una Pizza:
+    Entrada: Receta, Ingredientes
+    Proceso: Prepagar al Pizza
+    Salida: Disfrutar la Pizza
+
+Presentar un Examen:
+    Entrada: Estudiar para el Examen
+    Proceso: Presentar Examen
+    Salida: Obtener un 100
+
+
+
