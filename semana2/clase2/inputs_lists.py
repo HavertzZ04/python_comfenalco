@@ -62,7 +62,7 @@ def number_escale():
         number *= i
                 
     for i in range(9, 1, -1):
-        print(f"{i} / {number} = {int(number / i)}")
+        print(f"{i} / {int(number)} = {int(number / i)}")
         number /= i
             
     
