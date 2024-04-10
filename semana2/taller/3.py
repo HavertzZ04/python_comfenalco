@@ -16,9 +16,9 @@ Ejercicios practicos
 
 def age_calculator():
     current_year = 2024
-    user_year = int(input("What is your year of birth? "))
+    age = int(input("How old are you? "))
     
-    print(f"You are {current_year - user_year} years old")
+    print(f"You were born in {current_year - age}.")
       
 #age_calculator()    
 

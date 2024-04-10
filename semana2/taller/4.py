@@ -36,17 +36,22 @@ def multiplication_table():
 """
 
 def number_escale():
-    number = int(input("Type a number: "))
-    
-    #Multiplication
-    for i in range(2, 10, 1): 
-        print(f"{i} x {number} = {i * number}")
-        number *= i
+        number = int(input("Type a number: "))
+        
+        #Multiplication
+        for i in range(2, 10, 1): 
+            print(f"{i} x {number} = {i * number}")
+            number *= i
+                
+        #Division    
+        for i in range(9, 1, -1): 
+            print(f"{i} / {int(number)} = {int(number / i)}")
+            number /= i
             
-    #Division    
-    for i in range(9, 1, -1): 
-        print(f"{i} / {int(number)} = {int(number / i)}")
-        number /= i
+        answer = input("Do you want to continue? (y/n) ")
+        if answer.lower() == "y":
+            number_escale()
+        else:
+            print("thank you!!")
         
-        
-#number_escale()
+number_escale()
