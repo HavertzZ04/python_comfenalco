@@ -2,7 +2,7 @@ def display_menu():
     user_menu = ["1. Numbers from 1 to N", "2. Even numbers", "3. Odd numbers"]   
     method_menu = [display_numbers, even_number, odd_number]
 
-    print("\n<--------This is our options menu-------->\n")
+    print("\n<--------These are our options menu-------->\n")
     for option in user_menu:
         print(option)
     
