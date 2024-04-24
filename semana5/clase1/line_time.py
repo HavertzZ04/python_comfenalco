@@ -1,3 +1,5 @@
+#This program ask to users a year in order to find the UEFA Champions League Winner, also it provides how many championms league the teams won, it asks at the end if users want to continue checking more records or otherwise they want to close the program 
+
 champions_league_winners = {
     'Real Madrid': [1956, 1957, 1958, 1959, 1960, 1966, 1998, 2000, 2002, 2014, 2016, 2017, 2018, 2022],
     'AC Milan': [1963, 1969, 1989, 1990, 1994, 2003, 2007],
@@ -20,7 +22,7 @@ champions_league_winners = {
     'Steaua București': [1986],
     'PSV Eindhoven': [1988],
     'Aston Villa': [1982],
-    'Manchester City' : [2023]
+    'Manchester City': [2023]
 }
 
 
