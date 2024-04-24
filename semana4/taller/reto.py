@@ -33,7 +33,7 @@ def exit_question(func):
 def table_game(dimention, letter1, letter2):
     table = []
     
-    table = [i for i in (letter1 * ((dimention * dimention) - 1))]
+    table = [i for i in (letter1 * ((dimention ** 2) - 1))]
     table.insert(random.randint(0, len(table) -1), letter2)
     
     for i in range(dimention):
