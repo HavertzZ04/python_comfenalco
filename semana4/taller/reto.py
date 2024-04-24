@@ -1,3 +1,4 @@
+#Este codigo imprime un hijo de seleccionar le elemnto diferente dentro de un tabla
 import random 
 
 def dimentions(func):
@@ -45,14 +46,14 @@ def table_game(dimention, letter1, letter2):
         
         
     while True:
-        answer_h = int(input("Posicion horizontal: "))
-        answer_v = int(input("Posicion vetrtical: "))
+        answer_h = int(input("\nPosicion horizontal: "))
+        answer_v = int(input("Posicion vertical: "))
         
         if answer_h == location_h and answer_v == location_v:
-            print("Ganaste")
+            print("\nGanaste \n")
             break
         else:
-            print("Intentalo Nuevamente \n")      
+            print("\nIntentalo Nuevamente")      
 
 table_game()
 
