@@ -7,38 +7,26 @@ class User():
         self.weight = int(input("🧬 Enter your weight in kilograms (example: 66): "))  
 
     def BodyMassIndex(self): 
-        min_normal_weight = 18.5 # Peso min normal de un imc
-        max_normal_weight = 24.5 # Peso max normal de un imc
-        bmi = round(self.weight / (self.height ** 2), 1) # imc del usuario
+        bmi = round(self.weight / (self.height ** 2), 1) 
         
-        # Ingresamos a la llave y valor (range, status) del diccionario
-        for key, value in bmi_diccionary.items():
-            # Asignamos los valores a unas variables
-            bmi_range = value["range"] 
-            bmi_status = value["status"] 
+        for bmi_status, bmi_range in bmi_diccionary.items():
             
-            #Respuesta que se repite para todos los casos
-            answer_template = f"\n🩻  Body Mass Index: {bmi}\n📂 Status: {bmi_status}"
+            min_normal_bmi = bmi_diccionary['Normal'][0]
+            max_normal_bmi = bmi_diccionary['Normal'][1]
             
-            #Condicional para saber si el usuario tiene desnutricion, sobre peso o esta normal 
-            if bmi_range[0] <= bmi <= bmi_range[1]: #bmi_range tiene como valor una lista con dos numeros para saber los rangos
+            answer = f"\n🩻  Body Mass Index: {bmi}\n📂 Status: {bmi_status}"
+            
+            if bmi_range[0] <= bmi <= bmi_range[1]:
+                if bmi < min_normal_bmi: 
+                    win_weight = round((min_normal_bmi - bmi) * self.height ** 2)
+                    return f"{answer}\n📈 {self.first_name}, you have to win {win_weight} kgs."
+
+                elif bmi > max_normal_bmi:
+                    lose_weight = round((bmi - max_normal_bmi) * self.height ** 2)
+                    return f"{answer}\n📉 {self.first_name}, you have to lose {lose_weight} kgs."
                 
-                #Confirmamos si el usuario tiene desnutricion
-                if bmi < min_normal_weight: 
-                    #win_weght es el peso que el usuario debe ganar
-                    win_weight = round((min_normal_weight - bmi) * self.height ** 2)
-                    return f"{answer_template}\n📈 {self.first_name}, you have to win {win_weight} kgs."
-                
-                
-                #Confirmamos si el usuario tiene sobrepeso
-                elif bmi > max_normal_weight:
-                    #lose_weght es el peso que el usuario debe perder
-                    lose_weight = round((bmi - max_normal_weight) * self.height ** 2)
-                    return f"{answer_template}\n📉 {self.first_name}, you have to lose {lose_weight} kgs."
-                
-                #Felicitamos al usuario si su peso es normal
                 else:
-                    return f"{answer_template}\n🎉 Congratulations {self.first_name}!"
+                    return f"{answer}\n🎉 Congratulations {self.first_name}!"
                  
          
 usuario1 = User()
