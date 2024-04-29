@@ -6,7 +6,7 @@ class Student():
         self.questions = {      
             "1": "76 - 33",
             "2": "13 + 46",
-            "3": "98 - 39",
+            "3": "78 - 35",
             "4": "15 * 4",
             "5": "11 + 10 - 14"
         }     
@@ -14,7 +14,7 @@ class Student():
 
     def start_exam(self):
         print("\n📚 MATH EXAM 📚")
-        print("🗿 This exam has 5 questions, you will know your exam grade and the time it took you at the end. 🗿\n")
+        print(f"🗿 This exam has {len(self.questions)} questions, you will know your exam grade and the time it took you at the end. 🗿\n")
       
         answers = {}
         start_time = time.time()
@@ -55,7 +55,7 @@ class Student():
         else:
             print(f"\n🧩 You are a Master Mind {self.name}!")
         
-        print(f'🏆 Your score is {grade}% and it took you {total_time:.2f} seconds to finish the exam.')      
+        print(f'🏆 Your score is {grade:.1f}% and it took you {total_time:.2f} seconds to finish the exam.')      
         
 student1 = Student("Johan")
 answers, total_time = student1.start_exam()
