@@ -1,50 +1,52 @@
 import time
 
-class User():
+class Student():
     def __init__(self, name):
         self.name = name
+        self.questions = {      
+            "1": "76 - 33",
+            "2": "13 + 46",
+            "3": "98 - 39",
+            "4": "15 * 4",
+            "5": "11 + 10 - 14"
+        }     
         
-        
+
     def start_exam(self):
         print("\n📚 MATH EXAM 📚")
         print("🗿 This exam has 5 questions, you will know your exam grade and the time it took you at the end. 🗿\n")
-        
-        questions = {      
-            "1": "76 - 33",
-            "2": "6 + 41",
-            "3": "98 - 39",
-            "4": "17 * 4",
-            "5": "11 * 10 - 14"
-        }  
-        
+      
         answers = {}
-        
         start_time = time.time()
         
-        for key in questions:
+        for key in self.questions:
             while True:
                 try:
-                    user_answer = int(input(f"🛸 Result for {questions[key]} : "))
+                    user_answer = int(input(f"🛸 Result for {self.questions[key]} : "))
                     break
                 except ValueError:
                     print("⛔ Invalid input. Please enter a valid number.\n")
             answers[key] = user_answer
         
+        final_time = time.time()
+        total_time = final_time - start_time
+        
         print('')
+        return answers, total_time
+           
+        
+    def grade_exam(self, answers, total_time):
+        correct_answers = 0    
          
-        correct_answers = 0
-        for key in questions:
-            if answers[key] == eval(questions[key]):
+        for key in self.questions:
+            if answers[key] == eval(self.questions[key]):
                 print(f"Answer #{key}: ✅")
                 correct_answers += 1
             else:
                 print(f"Answer #{key}: ❌")
         
-        final_time = time.time()
-        total_time = final_time - start_time
-        
-        value_answer = 100 / len(questions) 
-        grade = value_answer * correct_answers
+        value_question = 100 / len(self.questions) 
+        grade = value_question * correct_answers
         
         if grade <= 49:
             print(f"\n🎯 Come on, you can do it better {self.name}!")
@@ -53,8 +55,8 @@ class User():
         else:
             print(f"\n🧩 You are a Master Mind {self.name}!")
         
-        print(f'🏆 Your score is {grade}% and it took you {total_time:.2f} seconds to finish the exam.')
-
+        print(f'🏆 Your score is {grade}% and it took you {total_time:.2f} seconds to finish the exam.')      
         
-user1 = User("Johan")
-user1.start_exam()
+student1 = Student("Johan")
+answers, total_time = student1.start_exam()
+student1.grade_exam(answers, total_time)
