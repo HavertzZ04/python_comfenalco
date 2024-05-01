@@ -1,8 +1,7 @@
 import time
 
 class Student():
-    def __init__(self, name):
-        self.name = name
+    def __init__(self):
         self.questions = {      
             "1": "76 - 33",
             "2": "13 + 46",
@@ -12,7 +11,7 @@ class Student():
         }     
         self.student_answers = {}
         self.total_time = 0
-        
+
 
     def start_exam(self):
         print("\n📚 MATH EXAM 📚")
@@ -20,10 +19,10 @@ class Student():
       
         start_time = time.time()
         
-        for key in self.questions:
+        for key, question in self.questions.items():
             while True:
                 try:
-                    answer = int(input(f"🛸 Result for {self.questions[key]} : "))
+                    answer = int(input(f"🛸 Result for {question} : "))
                     break
                 except ValueError:
                     print("⛔ Invalid input. Please enter a valid number.\n")
@@ -49,15 +48,12 @@ class Student():
         grade = value_question * correct_answers
         
         if grade <= 49:
-            print(f"\n🎯 Come on, you can do it better {self.name}!")
+            print("\n🎯 Come on, you can do it better!")
         elif grade <= 69:
-            print(f"\n✨ Good job {self.name}!")
+            print("\n✨ Good job!")
         else:
-            print(f"\n🧩 You are a Master Mind {self.name}!")
+            print("\n🧩 You are a Master Mind!")
         
         print(f'🏆 Your score is {grade:.1f}% and it took you {self.total_time:.2f} seconds to finish the exam.')      
         
         
-"""student1 = Student("Johan")
-student1.start_exam()
-student1.grade_exam()"""
