@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://learn.temporal.io/assets/images/banner_python-0d345d125b6892840c54f7e1460c8a5a.png" alt="Banner" width="100%">
+    <img src="https://raspberry-valley.azurewebsites.net/img/Python-01.jpg" alt="Banner" width="100%">
 </div>
 
 <h1 align="center">Repository dedicated to my Python Classes in Comfenalco</h1>
